@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" navbar-light bg-light" data-bs-theme="dark">
+    <image alt="logo" width="50" height="50" class="d-inline-block align-text-top" src="{% static 'images/mylogo.png' %}"></image>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link active" href="{% url 'homepage' %}">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="about">
+                <a class="nav-link active" href="{% url 'aboutpage' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'operator' %}">Admin</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+          
+        </span>
+    </div>
+</nav>

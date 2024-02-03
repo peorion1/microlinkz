@@ -1,0 +1,32 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+<h2>{{ product.name }}</h2>
+<p>Description: {{ product.description }}</p>
+<p>Price: ${{ product.price }}</p>
+<p>Stock Quantity: {{ product.stock_quantity }}</p>
+<p>Manufacturer: {{ product.manufacturer.name }}</p>
+<p>Category: {{ product.category.name }}</p>
+
+  {% if product.cpu %}
+<p>CPU: Cores - {{ product.cpu.cores }}, Clock Speed - {{ product.cpu.clock_speed }}, Socket - {{ product.cpu.socket }}</p>
+  {% endif %}
+
+  {% if product.gpu %}
+<p>GPU: VRAM - {{ product.gpu.vram }}, Memory Type - {{ product.gpu.memory_type }}</p>
+  {% endif %}
+
+  {% if product.ram %}
+<p>RAM: Capacity - {{ product.ram.capacity }}, Speed - {{ product.ram.speed }}</p>
+  {% endif %}
+
+  {% if product.storage %}
+<p>Storage: Capacity - {{ product.storage.capacity }}, Type - {{ product.storage.storage_type }}</p>
+  {% endif %}
+
+  {% if product.powersupply %}
+<p>Power Supply: Wattage - {{ product.powersupply.wattage }}, Efficiency Rating - {{ product.powersupply.efficiency_rating }}</p>
+  {% endif %}
+
+<a href="{% url 'product_update' pk=product.pk %}">Edit</a>
+<a href="{% url 'product_delete' pk=product.pk %}">Delete</a>
+{% endblock %}

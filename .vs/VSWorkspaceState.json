@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\montano",
+    "\\static",
+    "\\static\\css",
+    "\\webapp",
+    "\\webapp\\migrations",
+    "\\webapp\\templates",
+    "\\webapp\\templates\\pages",
+    "\\webapp\\__pycache__"
+  ],
+  "SelectedNode": "\\static\\css\\homepagestyle.css",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,12 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+<h2>Welcome to the Computer Parts Shop</h2>
+
+<ul>
+    <li><a href="{% url 'product_list' %}">View Products</a></li>
+    <li><a href="{% url 'product_create' %}">Create Product</a></li>
+</ul>
+
+<p>Feel free to explore and manage your computer parts inventory.</p>
+{% endblock %}
